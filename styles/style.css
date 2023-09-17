@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+    --cor-primaria: #00001a;
+    --cor-segundaria: #F6F6F6;
+    --cor-terciaria: #e65c00;
+    --cor-quartenario: #0022ff;
+    --cor-hover: #34353f;
+    
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-segundaria: 'Montserrat', sans-serif;
+}
+
+* { /* Reset de padrões do navegador */
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-segundaria);
+}
+.cabecalho {
+    padding: 2% 0% 0% 18%;
+}
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+.cabecalho__menu__link {
+    font-family: var(--fonte-segundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+.cabecalho__menu__link:hover {
+    color: var(--cor-quartenario);
+    padding: 0.03%;
+}
+
+.destaque-titulo {
+    color: var(--cor-terciaria);
+}
+.apresentacao {
+    padding: 5% 18%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.apresentacao__conteudo__titulo {
+     font-size: 2.25rem;
+     font-family: var(--fonte-primaria);
+}
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: var(--fonte-segundaria);
+    text-decoration: none;
+}
+.apresentacao__conteudo__texto a{ /* usando a letra (a) consigo apenas mudar cor e estilo das 
+                                (ancoras) sem precisar criar uma class nova sendo assim usando a mesma class do pai */
+    color: var(--cor-terciaria);
+    text-decoration: 0;
+}
+.apresentacao__conteudo__texto a:hover{
+    color: var(--cor-quartenario);
+}
+.apresentacao__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    justify-content: space-between;
+}
+.aprensatacao__link__redes{
+    font-size: 1.5rem;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+}
+.apresentacao__link__link {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-family: var(--fonte-segundaria);
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-segundaria);
+    font-weight: 600;
+    box-shadow: 0 0 300px #5050c2;
+}
+.apresentacao_img {
+    width: 50%;
+    border-radius: 16px;
+    box-shadow: 0 0 13px #5050c2;
+}
+.apresentacao__link__link:hover {
+    background-color: var(--cor-hover);
+    padding: 4%;
+}
+.rodape{
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-segundaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 6% 10%;
+    }
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5% 5%;
+    }
+    .apresentacao__conteudo {
+        width: auto;
+
+    }
+
+}
